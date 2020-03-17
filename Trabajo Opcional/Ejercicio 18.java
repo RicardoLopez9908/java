@@ -1,11 +1,11 @@
-package hola;
+package paquete;
 import java.util.Scanner;  
-public class TrabajoOpcional {
+public class trabajoOpcional {
 	/**Escribir un metodo static int cantidadVocales(String s) que dada una cadena que contiene
 	solo letras minusculas sin acentuar, devuelve la cantidad de vocales en dicha cadena. Nota: se puede
 	utilizar el metodo definida en el ejercicio anterior.*/
 	
-	public static String cantidadVocales(String s) {
+	public static int cantidadVocales(String s) {
 		String palabra= s;
 		int contador = 0;
 		for (int i=0; i <= palabra.length(); i++) {
@@ -15,8 +15,8 @@ public class TrabajoOpcional {
 			  ||palabra.charAt(i)=='o'
 			  ||palabra.charAt(i)=='u') {
 					contador++;}
-		return contador;			
-		}
+					}
+		return contador;
 		
 	}
 	
@@ -24,7 +24,7 @@ public class TrabajoOpcional {
 	
 		Scanner sn =new Scanner (System.in);
 		System.out.println("ingrese una palabra");
-		System.out.println("tiene un total de "+cantidadVocales(sn.nextLine()+" vocales"));
+		System.out.println("tiene un total de "+cantidadVocales(sn.nextLine())+" vocales");
 		// TODO Auto-generated method stub
 		}
 
