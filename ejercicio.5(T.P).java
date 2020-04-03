@@ -5,20 +5,20 @@ public class Persona {
     String nombre;
     int edad;
    
-public Persona(String valorNombre,int valorEdad) {
+public Persona(String valorNombre,int valorEdad) {	//creamos un constrcutor que contenga el nombre y edad
 	edad=valorEdad;
 	nombre=valorNombre;}
 
 
 
-public static boolean masJovenque(Persona otro) {
+public static boolean masJovenque(Persona otro) {   //verifica que sea mas joven o no que el parametro
 	int edadParametro= 30;
 	if(otro.edad<edadParametro) {
 		return true;}
 	else{
 		return false;}}	
 
-public static boolean tocayo(Persona otro){
+public static boolean tocayo(Persona otro){			//verifica que tenga el mismo nombre que el parametro
 	String nombreParametro="ernesto";
 	String nuevoNombre= otro.nombre.toLowerCase();
 	if(nombreParametro.equals(nuevoNombre)) {
@@ -26,7 +26,7 @@ public static boolean tocayo(Persona otro){
 	else{
 		return false;}}
 	
-public static boolean mismaPersona(Persona otro) {
+public static boolean mismaPersona(Persona otro) {	//verifica que sea la misma persona que el parametro
 	int edadParam=30;
 	if(tocayo(otro)==true){
 		if(otro.edad==edadParam){
@@ -36,8 +36,9 @@ public static boolean mismaPersona(Persona otro) {
 
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {   //a continuacion probamos las funciones
 		// TODO Auto-generated method stub
+		
 	Scanner sn1=new Scanner(System.in);
 	System.out.println("ingrese un nombre");
 	String snNombre=sn1.nextLine();
@@ -62,3 +63,4 @@ public static boolean mismaPersona(Persona otro) {
 	
 
 	}
+
