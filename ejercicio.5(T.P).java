@@ -63,4 +63,6 @@ public static boolean mismaPersona(Persona otro) {	//verifica que sea la misma p
 	
 
 	}
-
+/**seria adecuado comparar simplemente el dni de las personas para lograr tener una respuesta rapida y precisa;Igualmente tambien podria
+agregarse como un parametro mas ademas del nombre y edad para tener mayor certeza de que sea la persona correcta, como es en el
+caso de las votaciones en las que se compara el nombre,apellido y dni de acuerdo a los existentes en las planillas.
