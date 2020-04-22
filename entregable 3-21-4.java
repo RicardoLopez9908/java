@@ -17,18 +17,25 @@ return this.dados;
 
 //getter_escalera:
 public boolean GetEscalera() {
+	SetEscalera();
 	return this.escalera;
 }
 //getter_poker:
 public boolean GetPoker() {
+	SetPoker();
 	return this.poker;
 }
 //getter_generala:
 public boolean GetGenerala() {
+	SetGenerala();
 	return this.generala;
 }
 //getter_puntos
 public int GetPuntos() {
+	this.puntos=0;
+	SetEscalera();
+	SetPoker();
+	SetGenerala();
 	return this.puntos;
 }
 
@@ -44,7 +51,7 @@ public void SetDados(int[] c) {
 
 //setter_escalera:
 /**los dados deberan quedar del 1 al 5 o del 2 al 6. Otorga 20 puntos.*/
-public void SetEscalera() {
+private void SetEscalera() {
 	int contador=0;
 	for(int i=0;i<4;i++) {
 		if(cantidadAp(this.dados,i+1)==1){
@@ -63,7 +70,7 @@ public void SetEscalera() {
 
 //setter_poker:
 /**Cuatro dados iguales y uno distinto. Otorga 40 puntos.*/
-public void SetPoker() {
+private void SetPoker() {
 	for(int i=1;i<=6;i++){
 		if(cantidadAp(this.dados,i)==4){
 			this.generala=true;
@@ -75,7 +82,7 @@ public void SetPoker() {
 
 //setter_generala:
 /**Cinco dados iguales. Otorga 50 puntos.*/
-public void SetGenerala() {
+private void SetGenerala() {
 for(int i=1;i<=6;i++){
 	if(cantidadAp(this.dados,i)==5){
 		this.generala=true;
@@ -85,11 +92,5 @@ for(int i=1;i<=6;i++){
 
 
 
-
-
-//setter_puntos:
-/**Si no obtiene ninguna de las combinaciones anteriores el puntaje es 0 puntos.*/
-public void SetPuntos() {
-	this.puntos=0;
 }
-}
+
